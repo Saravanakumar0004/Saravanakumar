@@ -1,0 +1,19 @@
+import sys
+import msvcrt
+import time
+
+def switch_color(color):
+    if color == 'red':
+        return 'blue'
+    else:
+        return 'red'
+
+color = 'red'
+
+try:
+    while True:
+        print(f"Color is {color}. Press Enter to switch, or Ctrl + C to exit.")
+        msvcrt.getch()  # Wait for a key press
+        color = switch_color(color)
+except KeyboardInterrupt:
+    sys.exit(0)
